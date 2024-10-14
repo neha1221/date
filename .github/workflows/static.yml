@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date Proposal</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f7e1e1;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            text-align: center;
+            background: #fff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            animation: fadeIn 2s ease;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        h1 {
+            font-size: 2.5em;
+            color: #e91e63;
+        }
+        button {
+            background-color: #e91e63;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 1.2em;
+            cursor: pointer;
+            margin: 10px;
+        }
+        button:hover {
+            background-color: #d81b60;
+        }
+        #yesBtn {
+            background-color: #4CAF50;
+        }
+        #yesBtn:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Will you go on a date with me?</h1>
+        <button id="yesBtn" onclick="yesResponse()">Yes!</button>
+        <button onclick="noResponse()">No</button>
+    </div>
+
+    <script>
+        function yesResponse() {
+            alert('Yay! I can’t wait to go on a date with you!');
+            document.body.style.backgroundColor = '#c8e6c9'; // Change background to green
+        }
+        
+        function noResponse() {
+            alert('Oh, no worries! Maybe another time.');
+            document.body.style.backgroundColor = '#ffcdd2'; // Change background to red
+        }
+    </script>
+
+</body>
+</html>
